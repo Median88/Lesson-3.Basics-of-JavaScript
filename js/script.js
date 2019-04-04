@@ -23,30 +23,29 @@ function startOneTask() {
 }
 
 function startTwoScript() {
-    var i = 0,
-        maxNumber = 10,
-        join = '',
-        result = '';
-    do {
-        if (i == 0) {
-            join = 'это ноль';
-        } else if (i % 2 == 0) {
-            join = 'четное число';
-        } else {
-            join = 'нечетное число';
-        }
-        result += '<br>' + i + ' - ' + join;
-    } while (++i <= maxNumber);
+    var numbers = [3000, 3500, 5000, 4000];
+    result = numbers;
     document.getElementById('pasteResultTwoTask').innerHTML = result;
 }
 
-function startThreeScript() {
-    var i = 0,
-        result = 'Результат: ';
-    for (i = 0; i <= 9; result += i + '; ', i++) {
-        // здесь пусто
+
+function startThreeScriptA() {
+    var numbers = ["Красный кошелек", "Синий кошелек", "Розовый кошелек", "Оранжевый кошелек"];
+    result = numbers;
+    document.getElementById('pasteResultThreeTaskA').innerHTML = result;
+}
+
+function startThreeScriptB() {
+    var arr = [3000, 3500, 5000, 4000];
+    function arraySum(array) {
+        var sum = 0;
+        for (var i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        result = (sum);
     }
-    document.getElementById('pasteResultThreeTask').innerHTML = result;
+    arraySum(arr);
+    document.getElementById('pasteResultThreeTaskB').innerHTML = result;
 }
 
 function startForScript() {
